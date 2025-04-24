@@ -1,13 +1,15 @@
 {
   "name": "skilline-website-main",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
- "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"No tests defined\"",
+    "tailwind:init": "npx tailwindcss init -p"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sivaainkaran/education.git"
@@ -19,7 +21,11 @@
     "url": "https://github.com/sivaainkaran/education/issues"
   },
   "homepage": "https://github.com/sivaainkaran/education#readme",
-  "description": "",
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "tailwindcss": "^4.1.4"
   }
