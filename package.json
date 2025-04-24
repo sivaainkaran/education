@@ -1,14 +1,32 @@
 {
   "name": "skilline-website-main",
   "version": "1.0.0",
+  "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "live-server .",
-    "tailwind:init": "npx tailwindcss init -p",
-    "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"No tests defined\"",
+    "tailwind:init": "npx tailwindcss init -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivaainkaran/education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivaainkaran/education/issues"
+  },
+  "homepage": "https://github.com/sivaainkaran/education#readme",
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.4",
-    "live-server": "^1.2.2"
+    "tailwindcss": "^4.1.4"
   }
 }
