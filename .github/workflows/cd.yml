@@ -50,7 +50,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t sainkaranak/project:${{ github.sha }} .
 
-      # Tag Docker image as latest
+      # Tag Docker image as latest do
       - name: Tag image as latest
         run: docker tag sainkaranak/project:${{ github.sha }} sainkaranak/project:latest
 
