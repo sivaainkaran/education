@@ -38,7 +38,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Set up Docker Buildx (optional but good for performance/flexibility)
+      # Set up Docker Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -46,17 +46,18 @@ jobs:
       - name: Login to Docker Hub
         run: echo "${{ secrets.PASSWORD }}" | docker login -u ${{ secrets.USERNAME }} --password-stdin
 
-      # Build Docker image with commit SHA
+      # Build Docker image
       - name: Build Docker image
-        run: docker build -t sainkaranak/project:${{ github.sha }} .
+        run: docker build -t ainkaranak/project:${{ github.sha }} .
 
-      # Tag Docker image as latest do
+      # Tag Docker image as latest
       - name: Tag image as latest
-        run: docker tag sainkaranak/project:${{ github.sha }} sainkaranak/project:latest
+        run: docker tag ainkaranak/project:${{ github.sha }} ainkaranak/project:latest
 
-      # Push Docker image (SHA and latest tags)
+      # Push Docker image with SHA
       - name: Push Docker image with SHA
-        run: docker push sainkaranak/project:${{ github.sha }}
+        run: docker push ainkaranak/project:${{ github.sha }}
 
+      # Push Docker image with latest tag
       - name: Push Docker image with latest tag
-        run: docker push sainkaranak/project:latest
+        run: docker push ainkaranak/project:latest
