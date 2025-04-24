@@ -13,8 +13,6 @@ RUN npm install
 # Copy the entire project into the container
 COPY . .
 
-# Build the Next.js app (only if you're using Next.js or a similar framework)
-RUN npm run build
 
 # Expose the default port
 EXPOSE 3000
